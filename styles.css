@@ -1,21 +1,36 @@
 body {
-    background-color: hsl(7, 85%, 99%);
+    /* background-color: hsl(7, 85%, 99%); */
+    background-color: #1C1C1C;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 15%;
+    margin-right: 15%;
+    color: #ebe5e5;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 15%;
+    margin-right: 15%;
+    color: #ebe5e5;
+}
+
 #site-title {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
-    color: #3c3a3a;
+    color: #ebe5e5;
     text-align: center;
-    margin: 35px;
+    margin: 50px;
 }
 
 .nav-bar {
-    background-image: linear-gradient(#941B0C, #BC3908);
-    /* background-color: #344e6a; */
+    /* background-image: linear-gradient(#941B0C, #BC3908); */
+    background-color: #344e6a;
     margin: 0;
     display: flex;
     flex-flow: row wrap;
@@ -24,18 +39,23 @@ body {
 }
 
 .nav-button {
-    background-image: linear-gradient(#941B0C, #BC3908);
+    /* background-image: linear-gradient(#941B0C, #BC3908); */
+    background-color: #344e6a;
     padding: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 24px;
     font-style: italic;
     text-align: center;
-    color: #e8d9d9;
+    color: #f1e0e0;
+}
+
+.nav-button.active {
+    font-style: normal;
 }
 
 .nav-button:link {
     text-decoration: none;
-    color: #e8d9d9;
+    color: #f1e0e0;
 }
 
 .nav-button:visited {
@@ -47,4 +67,25 @@ body {
     /* background-image: none; */
     color: #ffffff;
     cursor: pointer;
+}
+
+.image_container {
+    /* border: 5px solid white; */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.image_container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.divider {
+    background-color: #344e6a;
+    margin: 15% 10% 10%;
+    height: 70px;
 }
