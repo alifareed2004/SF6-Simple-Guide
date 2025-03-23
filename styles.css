@@ -1,6 +1,20 @@
+:root {
+    --bg-color: #f6f6f6;
+    --text-color: #1C1C1C;
+    --nav-bar-color: linear-gradient(#436488, #2e435c);
+    --nav-text-color: #efecec;
+}
+
+.dark-mode {
+    --bg-color: #1C1C1C;
+    --text-color: #ebe5e5;
+}
+
 body {
     /* background-color: hsl(7, 85%, 99%); */
-    background-color: #1C1C1C;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.2s;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,27 +24,56 @@ h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-left: 15%;
     margin-right: 15%;
-    color: #ebe5e5;
+    /* color: #ebe5e5; */
 }
 
 p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-left: 15%;
     margin-right: 15%;
-    color: #ebe5e5;
+    /* color: #ebe5e5; */
 }
 
 #site-title {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
-    color: #ebe5e5;
+    /* color: #ebe5e5; */
     text-align: center;
     margin: 50px;
 }
 
+#theme-toggle {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background-image: var(--nav-bar-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#theme-toggle svg {
+    fill: var(--nav-text-color);
+}
+
+#theme-toggle svg:last-child {
+    display: none;
+}
+
+.dark-mode #theme-toggle svg:first-child {
+    display: none;
+}
+
+.dark-mode #theme-toggle svg:last-child {
+    display: block;
+}
+
 .nav-bar {
-    /* background-image: linear-gradient(#941B0C, #BC3908); */
-    background-color: #344e6a;
+    background-image: var(--nav-bar-color);
+    /* background-color: #344e6a; */
     margin: 0;
     display: flex;
     flex-flow: row wrap;
@@ -39,14 +82,14 @@ p {
 }
 
 .nav-button {
-    /* background-image: linear-gradient(#941B0C, #BC3908); */
-    background-color: #344e6a;
+    background-image: linear-gradient(#436488, #2e435c);
+    /* background-color: #344e6a; */
     padding: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 24px;
     font-style: italic;
     text-align: center;
-    color: #f1e0e0;
+    color: var(--nav-text-color);
 }
 
 .nav-button.active {
@@ -55,11 +98,11 @@ p {
 
 .nav-button:link {
     text-decoration: none;
-    color: #f1e0e0;
+    color: var(--nav-text-color);
 }
 
 .nav-button:visited {
-    color: black;
+    color: var(--nav-text-color);
 }
 
 .nav-button:hover {
@@ -85,7 +128,8 @@ p {
 }
 
 .divider {
-    background-color: #344e6a;
-    margin: 15% 10% 10%;
+    background-image: var(--nav-bar-color);
+    /* background-color: #344e6a; */
+    /* margin: 15% 10% 10%; */
     height: 70px;
 }
