@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --bg-color: #f6f6f6;
     --text-color: #1C1C1C;
@@ -15,9 +21,6 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.2s;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 h2 {
@@ -40,19 +43,42 @@ p {
     /* color: #ebe5e5; */
     text-align: center;
     margin: 50px;
+    cursor: pointer;
+    /* transition: color 0.2s; */
+}
+
+#site-title a:link {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.2s;
+}
+
+#site-title a:visited {
+    color: rgb(186, 48, 48);
+}
+
+#site-title a:hover {
+    color: rgb(186, 48, 48);
 }
 
 #theme-toggle {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    /* height: 50px; */
     padding: 0;
     border: 0;
-    border-radius: 50%;
-    background-image: var(--nav-bar-color);
+    /* border-radius: 50%; */
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: stretch;
     cursor: pointer;
+}
+
+#theme-toggle:hover {
+    background-color: #496d90;
+    background-image: none;
+    transition: background-color 0.2s;
 }
 
 #theme-toggle svg {
@@ -78,7 +104,7 @@ p {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;    /* Aligns items in the flex box on the main-axis (horizontal) */
-    align-items: center;    /* Aligns items in the flex box on the cross-axis (vertical) */
+    align-items: stretch;    /* Aligns items in the flex box on the cross-axis (vertical) */
 }
 
 .nav-button {
@@ -87,9 +113,10 @@ p {
     padding: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 24px;
-    font-style: italic;
+    /* font-style: italic; */
     text-align: center;
     color: var(--nav-text-color);
+    transition: background-color 0.2s;
 }
 
 .nav-button.active {
@@ -106,8 +133,8 @@ p {
 }
 
 .nav-button:hover {
-    /* background-color: black; */
-    /* background-image: none; */
+    background-color: #496d90;
+    background-image: none;
     color: #ffffff;
     cursor: pointer;
 }
