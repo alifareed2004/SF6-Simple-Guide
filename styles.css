@@ -140,7 +140,7 @@ td {
     /* font-style: italic; */
     text-align: center;
     color: var(--nav-text-color);
-    transition: background-color 0.2s;
+    transition: background-color 0.2s ease-in-out, color 0.2 ease-in-out;
 }
 
 .nav-button.active {
@@ -160,6 +160,50 @@ td {
     background-color: #496d90;
     background-image: none;
     color: #ffffff;
+    cursor: pointer;
+}
+
+/* Makes sure that the dropdown container is positioned correctly */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Properties of the dropdown menu, starts off hidden */
+.dropdown-menu {
+    /* display: none; */
+    position: absolute;
+    background-color: #2e435c;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+/* Makes the dropdown menu visible when cursor hovers over the dropdown container (i.e Misc. button) */
+.dropdown:hover .dropdown-menu {
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Styling for each button in the dropdown menu */
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+/* Change background color on hover of dropdown menu buttons  */
+.dropdown-menu a:hover {
+    background-color: #496d90;
     cursor: pointer;
 }
 
